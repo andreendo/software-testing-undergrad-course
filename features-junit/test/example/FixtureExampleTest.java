@@ -1,18 +1,16 @@
-package ex1;
+package example;
 
 import static org.junit.jupiter.api.Assertions.*;
-
-import java.time.Duration;
 
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
-class Example01 {
-
+class FixtureExampleTest {
+	static BancoDeDados bd = Estrutura.criarConexao();
+	
 	@AfterAll
 	static void afterAll() {
 		System.out.println("afterAll");
@@ -34,29 +32,29 @@ class Example01 {
 	}	
 
 	@Test
-	void testPontoFlutuante() {
-		float var = 1.0f / 2.0f;
+	void test01() {
+		System.out.println("test 01");
 		
-		assertEquals(0.5, var);
-		
-		float var2 = 1.0f / 3.0f;
-		
-		assertEquals(0.33, var2, 0.01);
-		System.out.println(0.33 - var2);
+		bd.adicionarDadosFake();
+		Estrutura.executar("run test01");
+		bd.apagar();
 	}
 
 	@Test
-	void testPontoFlutuante2() {
-		assertThrows(Exception.class, () -> {
-//			throw new Exception();
-		});
-	}	
-	
-	@Test
-	void testTimeout() {
-		assertTimeoutPreemptively(Duration.ofMillis(1000), () -> {
-			while(true);
-		});
+	void test02() {
+		System.out.println("test 02");
+
+		bd.adicionarDadosFake();
+		Estrutura.executar("run test02");
+		bd.apagar();
 	}
-	
+
+	@Test
+	void test03() {
+		System.out.println("test 03");
+		
+		bd.adicionarDadosFake();
+		Estrutura.executar("run test03");
+		bd.apagar();		
+	}	
 }
