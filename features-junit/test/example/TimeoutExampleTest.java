@@ -12,7 +12,9 @@ class TimeoutExampleTest {
 	@Test
 	void testSemTimeout() {
 		assertTimeoutPreemptively(Duration.ofSeconds(1), () -> {
+			
 			op.somatoria(10);
+			
 		});
 	}
 
