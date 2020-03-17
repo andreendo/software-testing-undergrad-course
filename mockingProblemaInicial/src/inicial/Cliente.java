@@ -12,8 +12,8 @@ public class Cliente {
     /**
      * Metodo sob teste
      */
-    public long efetuarSaque(long valor) 
-            throws SemFundosException {
+    public long efetuarSaque(long valor)	
+    			throws SemFundosException {
         Conta conta = gerenteDeContas.acharConta(this);
         long saldo = gerenteDeContas.recuperarSaldo(conta);
         if(saldo < valor)
