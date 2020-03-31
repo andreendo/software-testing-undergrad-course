@@ -24,37 +24,30 @@ class FixtureExampleTest {
 	@BeforeEach
 	void beforeEach() {
 		System.out.println("BeforeEach");
+		bd.adicionarDadosFake();
 	}
 
 	@AfterEach
 	void afterEach() {
 		System.out.println("AfterEach");
+		bd.apagar();
 	}	
 
 	@Test
 	void test01() {
 		System.out.println("test 01");
-		
-		bd.adicionarDadosFake();
 		Estrutura.executar("run test01");
-		bd.apagar();
 	}
 
 	@Test
 	void test02() {
 		System.out.println("test 02");
-
-		bd.adicionarDadosFake();
 		Estrutura.executar("run test02");
-		bd.apagar();
 	}
 
 	@Test
 	void test03() {
 		System.out.println("test 03");
-		
-		bd.adicionarDadosFake();
 		Estrutura.executar("run test03");
-		bd.apagar();		
 	}	
 }
