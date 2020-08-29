@@ -11,6 +11,7 @@ import exemplo.linha.NovaLinha;
  */
 public class NovaLinhaTest {
     
+	//Caminho executado: 	
     @Test
     public void testCobreArco3_9() {
         NovaLinha nl = new NovaLinha();

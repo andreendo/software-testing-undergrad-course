@@ -11,17 +11,17 @@ public class NovaLinha {
 	 * @return String
 	 */
 	public String collapseNewlines(String argStr) {
-		char last = argStr.charAt(0);
-		StringBuffer sBuf = new StringBuffer();
+		/*1*/char last = argStr.charAt(0);
+		/*1*/StringBuffer sBuf = new StringBuffer();
 
-		for (int i = 0; i < argStr.length(); i++) {
-			char ch = argStr.charAt(i);
-			if (ch != '\n' || last != '\n') {
-				sBuf.append(ch);
-				last = ch;
+		for (/*2*/int i = 0; /*3*/i < argStr.length(); /*4*/i++) {
+			/*5*/char ch = argStr.charAt(i);
+			if (/*6*/ch != '\n' || /*7*/last != '\n') {
+				/*8*/sBuf.append(ch);
+				/*8*/last = ch;
 			}
 		}
 
-		return sBuf.toString();
+		/*9*/return sBuf.toString();
 	}
 }
