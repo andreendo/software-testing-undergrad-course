@@ -8,7 +8,7 @@ public class Mutante1 {
 
     public float pow(int x, int y) {
         int pow;
-        if (y > 0) {    //onde aplicou a mutacao
+        if (y > 0) {    //onde aplicou a mutacao '>=' -> '>'
             pow = y;
         } else {
             pow = -y;

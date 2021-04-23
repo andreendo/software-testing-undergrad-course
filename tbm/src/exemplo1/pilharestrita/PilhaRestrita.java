@@ -14,7 +14,7 @@ public class PilhaRestrita {
 			throw new PilhaCheiaException();
 		}
 		
-		array[0] = objeto;
+		array[posicao] = objeto;
 		posicao++;
 	}
 

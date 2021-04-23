@@ -15,7 +15,7 @@ public class Mutante3 {
         }
 
         float res = 1;
-        while (pow != 0) {  //mutação
+        while (pow != 0) {  //mutação '>' -> '!='
             res = res * x;
             pow--;
         }

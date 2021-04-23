@@ -16,7 +16,7 @@ public class Mutante4 {
 
         float res = 1;
         while (pow > 0) {
-            res = res + x;  //trocou * por +
+            res = res + x;  //trocou '*' por '+'
             pow--;
         }
 
